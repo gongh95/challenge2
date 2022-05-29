@@ -12,6 +12,10 @@ function armarHorca() { // funcion para crear horca
     lapiz.closePath();
 }
 
+function limpiar() {
+    canvas.width = canvas.width;
+}
+
 function primerIntento() { //cabeza
     lapiz.beginPath();
     lapiz.arc(150,45,25,0,2*Math.PI);

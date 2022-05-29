@@ -12,8 +12,26 @@ button {
     border: none;
     border-radius: 10px;
     background-color: #06113C;
-    color: #FF8C32;;
+    color: #FF8C32;
     padding: 5px;
+    font-weight: 600;
+    width: 180px;
+}
+
+textarea {
+    resize: none;
+    width: 200px;
+    height: 100px;
+    font-family: inherit;
+    padding: 1em;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.hidden {
+    opacity: 0.1;  /* Poner en 0! */
+    position: absolute;
+    display: none;
 }
 
 body {
@@ -38,15 +56,17 @@ body {
 
 /* INICIO */
 
-.inicio {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    max-width: 200px;
-    row-gap: 10px;
-}
-
 section {
     margin: 0 auto;
     padding: 1em;
+    border: 1px solid #333;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    min-width: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10px;
 }

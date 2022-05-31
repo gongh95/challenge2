@@ -2,7 +2,8 @@ const pantallaInicio = document.getElementById('inicio'), //declaracion e inicia
       pantallaAgregarPalabra = document.getElementById('agregar-palabra'),
       pantallaJuego = document.getElementById('juego');
 
-const textArea = document.getElementById('textarea-palabra');
+const textArea = document.getElementById('textarea-palabra'),
+      modalError = document.getElementById('modal-error');
 
 const iniciarJuegoBtn = document.getElementById('iniciar-btn'), //declaracion e inicializacion de botones
       irPantallaAgregarPalabraBtn = document.getElementById('agregar-btn'),
@@ -35,21 +36,16 @@ irPantallaAgregarPalabraBtn.addEventListener('click', () => {
     pantallaAgregarPalabra.classList.toggle('hidden');
 });
 
-
-
 guardarPalabra.addEventListener('click', () => {
-    // pantallaAgregarPalabra.classList.toggle('hidden');
-    // pantallaInicio.classList.toggle('hidden');
     const validar = textArea.value;
-    // const reg = new RegExp([A-Z]);
-    const reg = /(^[A-Z]{2,30})$/;
-    const mayusculas = new RegExp(/(^[A-Z]{2,30})$/);
-    console.log(mayusculas);
-    // textArea.value = textArea.value.toUpperCase(); //convertir a mayuscula
+    const mayusculas = new RegExp(/(^[A-Z]{2,8})$/);
 
     if (validar.includes(" ") || !validar.match(mayusculas)) {
         textArea.value = ""; // limpia el textarea
-        return console.log("Solo ingresar letras mayúsculas");
+        modalError.classList.toggle('hidden'); // muestra el modal
+        setTimeout(() => {
+            modalError.classList.toggle('hidden'); // esconde el modal a los ms indicados
+        }, 2000);
     }
     else {
         agregarPalabra();
@@ -63,12 +59,11 @@ volverBtn.addEventListener('click', () => {
 });
 
 reiniciarJuego.addEventListener('click', () => {
-    limpiar();
-    armarHorca();
+    limpiar(); // se vacia el canvas
+    armarHorca(); // se arma el diseño
 });
 
 finalizarJuego.addEventListener('click', () => {
-
     pantallaInicio.classList.toggle('hidden');
     pantallaJuego.classList.toggle('hidden');
 });

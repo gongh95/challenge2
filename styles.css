@@ -21,7 +21,10 @@ button {
 textarea {
     resize: none;
     width: 200px;
-    height: 100px;
+    height: 70px;
+    /* background: none; */
+    /* border: none; */
+    outline: none;
     font-family: inherit;
     padding: 1em;
     text-align: center;

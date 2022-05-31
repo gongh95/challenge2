@@ -7,7 +7,9 @@ const textArea = document.getElementById('textarea-palabra'),
       modalExito = document.getElementById('modal-exito'),
       palabraADescubrir = document.getElementById('palabra-a-descubrir'),
       letrasErradas = document.getElementById('letras-equivocadas'),
-      containerPalabras = document.getElementById('container-palabras');
+      containerPalabras = document.getElementById('container-palabras'),
+      inputVacio = document.getElementById('input-vacio'),
+      tecladoVirtual = document.getElementById('teclado-virtual');
 
 const iniciarJuegoBtn = document.getElementById('iniciar-btn'), //declaracion e inicializacion de botones
       irPantallaAgregarPalabraBtn = document.getElementById('agregar-btn'),

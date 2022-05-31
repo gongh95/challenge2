@@ -47,6 +47,16 @@ textarea {
     letter-spacing: 1px;
 }
 
+#input-vacio {
+    width: 0px;
+    height: 0px;
+    background: none;
+    color: transparent;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
 .hidden {
     opacity: 0.1;  /* Poner en 0! */
     position: absolute;

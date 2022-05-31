@@ -64,3 +64,16 @@ document.addEventListener('keydown', (e) => {
         console.log("Esa tecla no se va a mostrar");
     }
 })
+
+
+// TECLADO PARA MOVIL
+
+function tecladoMovil() {
+    inputVacio.focus();
+}
+
+tecladoVirtual.addEventListener('click', tecladoMovil);
+if (tecladoVirtual.checked) {
+    console.log("hacer algo");
+    tecladoMovil();
+}

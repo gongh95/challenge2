@@ -8,6 +8,17 @@ p {
     color: #333;
 }
 
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
 button {
     border: none;
     border-radius: 10px;
@@ -72,4 +83,27 @@ section {
     align-items: center;
     flex-direction: column;
     row-gap: 10px;
+}
+
+#modal-error {
+    font-weight: 700;
+    color: #af0606;
+}
+
+#modal-exito {
+    font-weight: 700;
+    color: #188c17;
+}
+
+footer {
+    margin-top: 1em;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer p svg {
+    width: 30px;
+    transform: translate(0px, 8px);
 }

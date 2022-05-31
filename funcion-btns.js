@@ -3,7 +3,8 @@ const pantallaInicio = document.getElementById('inicio'), //declaracion e inicia
       pantallaJuego = document.getElementById('juego');
 
 const textArea = document.getElementById('textarea-palabra'),
-      modalError = document.getElementById('modal-error');
+      modalError = document.getElementById('modal-error'),
+      modalExito = document.getElementById('modal-exito');
 
 const iniciarJuegoBtn = document.getElementById('iniciar-btn'), //declaracion e inicializacion de botones
       irPantallaAgregarPalabraBtn = document.getElementById('agregar-btn'),
@@ -13,7 +14,7 @@ const iniciarJuegoBtn = document.getElementById('iniciar-btn'), //declaracion e 
       finalizarJuego = document.getElementById('finalizar-btn');
 
 // palabras default para el juego
-const palabrasDefault = ["PEPITO", "OTORRINOLARINGOLOGO", "VEHICULO", "IMPRESORA", "ACTIVIDAD", "OCEANO"];
+const palabrasDefault = ["PEPITO", "VEHICULO", "IMPRESOR", "EMPRESA", "OCEANO"];
 let palabras = []; // palabras para jugar
 palabras = palabrasDefault.map(palabra => { 
     return palabra; //agregar palabras default
@@ -50,6 +51,10 @@ guardarPalabra.addEventListener('click', () => {
     else {
         agregarPalabra();
         textArea.value = ""; // limpia el textarea
+        modalExito.classList.toggle('hidden'); // muestra el modal
+        setTimeout(() => {
+            modalExito.classList.toggle('hidden'); // esconde el modal a los ms indicados
+        }, 2000);
     }
 });
 

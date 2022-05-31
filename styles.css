@@ -32,7 +32,7 @@ button {
 textarea {
     resize: none;
     width: 200px;
-    height: 70px;
+    height: 65px;
     /* background: none; */
     /* border: none; */
     outline: none;
@@ -40,6 +40,11 @@ textarea {
     padding: 1em;
     text-align: center;
     font-size: 1.2em;
+}
+
+#palabra-a-descubrir {
+    opacity: .4;
+    letter-spacing: 1px;
 }
 
 .hidden {
@@ -84,6 +89,18 @@ section {
     flex-direction: column;
     row-gap: 10px;
 }
+
+/* JUEGO */
+
+.container-palabras p {
+    display: inline;
+}
+
+.spancito {
+    margin: 0 3px;
+    text-decoration: underline;
+}
+
 
 #modal-error {
     font-weight: 700;
